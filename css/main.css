@@ -636,7 +636,8 @@ html {
 
 .protfolio .myimage > div {
     transform-style: preserve-3d;
-    perspective: 300px
+    perspective: 300px;
+    margin: 10px 0
 }
 
 
