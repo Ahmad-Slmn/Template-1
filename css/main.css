@@ -1,0 +1,945 @@
+/* START MY GLOBLE */
+
+body {
+    font-family: arial;
+    overflow-x: hidden
+}
+
+.contain {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    outline: none;
+    list-style: none;
+    text-decoration: none
+}
+
+::selection {
+    background: black;
+    color: yellow
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #01ab4985;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #01ab49;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f6f6f6;
+
+}
+
+.fa-arrow-up {
+    position: fixed;
+    bottom: 80px;
+    right: 5px;
+    padding: 15px;
+    background-color: #01ab49;
+    cursor: pointer;
+    border-radius: 15px;
+    color: #fff;
+    display: none
+}
+
+.main-title {
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    font-style: italic;
+    transition: all .3s;
+    transition-delay: .3s
+}
+
+.main-title::before,
+.main-title::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #2dcc70;
+    transition: all .6s;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0
+}
+
+.main-title::before {
+    left: -15px
+}
+
+.main-title:hover::before {
+    z-index: -1;
+    animation: left-move .3s linear forwards;
+
+}
+
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px
+    }
+
+    100% {
+        border-radius: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1
+    }
+}
+
+.main-title::after {
+    right: -15px
+}
+
+.main-title:hover::after {
+    z-index: -1;
+    animation: right-move .3s linear forwards;
+
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px
+    }
+
+    100% {
+        border-radius: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1
+    }
+}
+
+.header .fa-bars {
+    display: none !important
+}
+
+:root {
+
+    --color1: #2ecc71;
+    --trans: .4s
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity var(--trans)
+}
+
+/* END MY GLOBLE */
+
+/* Start  Header  */
+.header .slider {
+    background: white;
+    height: 600px;
+    background-image: url('../photos/face_polat.jpg');
+    background-size: cover;
+    background-position: center
+}
+
+.header .slider .intro {
+    text-align: center;
+    color: #fff;
+    padding-top: 300px;
+
+
+}
+
+.header .slider .intro h2 {
+    margin: auto;
+    width: fit-content;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+    font-style: italic;
+
+
+}
+
+.header .slider .intro button {
+
+    background: none;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 50px;
+    border: 1px solid #fff
+}
+
+.header .slider .intro .main-title::before,
+.header .slider .intro .main-title::after {
+    background-color: red
+}
+
+.header .slider .intro button a {
+    color: inherit
+}
+
+
+.header .nav_bar {
+    background: #253E31;
+    color: #fff;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px
+}
+
+.header .nav_bar h2 {
+    display: flex;
+    align-items: center
+}
+
+.header .nav_bar h2 span {
+    color: var(--color1);
+    margin-left: 5px
+}
+
+
+.header .nav_bar ul {
+
+    display: flex
+}
+
+.header .nav_bar ul li {
+    padding: 10px
+}
+
+.header .nav_bar ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 17px;
+    transition: var(--trans);
+    display: inline-block
+}
+
+
+.header .nav_bar ul li a:hover {
+    color: #30d576;
+    transform: translateX(7px)
+}
+
+
+/* End Header */
+
+/* Start Featu */
+.featu {
+
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.featu .contain {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px
+}
+
+.featu .contain > div:not(:last-of-type) {
+
+    margin-right: 10px
+}
+
+.featu .feat {
+    padding: 10px
+}
+
+.featu .feat h3 {
+    color: #444
+}
+
+.featu .feat p {
+
+    line-height: 1.6;
+    color: #777
+}
+
+/*End Featu */
+
+/*Start About */
+.about_me {
+    background-color: #f2f2f2;
+    overflow: hidden;
+
+}
+
+.about_me .contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px
+}
+
+.about_me .img img {
+    width: 100%;
+    transition: 1s;
+    filter: grayscale(100%)
+}
+
+.about_me .img img:hover {
+    filter: grayscale(0)
+}
+
+.about_me .info {
+
+    padding-left: 40px
+}
+
+.about_me .info h2 {
+    color: #555
+}
+
+
+
+.about_me .info > p:last-of-type {
+    margin-top: 25px;
+
+}
+
+.about_me .info p {
+
+    line-height: 1.6;
+    color: #666
+}
+
+.about_me .info .hobi {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%
+}
+
+
+
+
+.about_me .info .hobi .content-box {
+    margin: 20px;
+    position: relative
+}
+
+.about_me .info .hobi .content-box h3 {
+    color: #555
+}
+
+.about_me .info .hobi .content-box .icun {
+    position: absolute;
+    top: -34px;
+    left: -50px;
+
+}
+
+.about_me .info .hobi .content-box .icun i {
+    margin-top: 30px;
+    color: var(--color1)
+}
+
+.about_me .info .hobi .content-box .text h3 {
+    margin-bottom: 5px
+}
+
+/*End About */
+
+
+/*Start Skills */
+.myskills {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    overflow: hidden
+}
+
+.myskills .contain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px
+}
+
+.myskills .skills h2 {
+    color: #555
+}
+
+.myskills .skills p {
+
+    line-height: 1.6;
+    color: #666
+}
+
+.myskills .skills p:last-of-type {
+    margin-top: 25px;
+
+}
+
+
+.myskills .skills button {
+    background: none;
+    border: 1px solid var(--color1);
+    color: #2dcc70;
+    padding: 10px 30px;
+    margin-top: 20px
+}
+
+.myskills .skills button a {
+    color: black;
+    font-weight: bold
+}
+
+.myskills .prog .tack h3 {
+    color: #555;
+    text-transform: uppercase
+}
+
+.myskills .prog .tack div {
+    background-color: #f2f2f2;
+    height: 30px
+}
+
+.myskills .prog .tack div span {
+    background-color: var(--color1);
+    height: 100%;
+    display: block;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: right;
+    color: #fff
+}
+
+/*End Skills*/
+
+/* Start Resume */
+
+.resume {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color: #f2f2f2;
+    text-align: center
+}
+
+.resume h2 {
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.resume p {
+
+    line-height: 1.6;
+    color: #666;
+    padding: 0 40px;
+}
+
+.resume button {
+    background: none;
+    border: 1px solid #2dcc70;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+
+.resume button a {
+    color: inherit;
+    font-style: italic
+}
+
+/*End Resume */
+
+
+
+/* Start Eduaction */
+.myedu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden
+}
+
+.myedu hr {
+    margin: 20px 0;
+    background-color: #999;
+    border: 0;
+    height: 1px
+}
+
+
+
+.myedu .mainu {
+    width: 50%;
+    float: left;
+    margin-right: 5%
+}
+
+.myedu .epx {
+    width: 45%;
+    float: left
+}
+
+.myedu .epx .certificate h3 {
+    margin-top: 100px;
+    margin-bottom: 10px
+}
+
+.myedu .epx .certificate span {
+    display: block;
+    margin-bottom: 10px
+}
+
+.myedu .epx .certificate span:first-of-type {
+    color: #999
+}
+
+.myedu .epx .certificate span:last-of-type {
+    background-color: 2dcc70;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 10px
+}
+
+
+.myedu .epx p {
+    line-height: 1.6;
+    color: #777;
+
+}
+
+.myedu .mainu p {
+    line-height: 1.6;
+    color: #666
+}
+
+.myskills .skills p:last-of-type {
+    margin-top: 25px;
+
+}
+
+/*End Eduaction*/
+
+
+/* Start Test Mon */
+
+.testmo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f2f2f2;
+    text-align: center
+}
+
+.testmo .col {
+    display: none !important;
+    position: relative
+}
+
+.testmo .col > img {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 3px;
+    transition: all 2s ease
+}
+
+.testmo .col > img:hover {
+    transform: rotateY(180deg)
+}
+
+
+.testmo .col.slected {
+    display: block !important
+}
+
+.testmo q {
+    line-height: 1.9;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0
+}
+
+.testmo h3 {
+    color: #777;
+    margin: 10px;
+    font-size: 30px
+}
+
+.testmo ul li {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #2dcc70;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--trans)
+}
+
+
+.testmo ul li:hover,
+.testmo ul li.active {
+    background-color: var(--color1)
+}
+
+/*End Test Mon */
+
+/* Start Portfolio */
+.protfolio {
+
+    padding-top: 50px;
+    padding-bottom: 70px;
+    text-align: center
+}
+
+.protfolio h2 {
+    color: #777;
+    margin-bottom: 10px
+}
+
+.protfolio p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px
+}
+
+.protfolio .myimage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px
+}
+
+.protfolio .myimage > div {
+    transform-style: preserve-3d;
+    perspective: 300px
+}
+
+
+.protfolio .myimage > div img {
+    width: 100%;
+    margin: 10px;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 1px 2px 9px;
+    transition: var(--trans)
+}
+
+.protfolio .myimage > div:hover img {
+    transform: translateZ(20px)
+}
+
+/* End Portfolio */
+
+
+/* Start Contect Me */
+.contect_me {
+
+    background-color: #252f31;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 70px
+}
+
+.contect_me .contain {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px
+}
+
+.contect_me .info {
+
+    font-style: italic;
+
+}
+
+
+.contect_me h2 {
+    color: #fff
+}
+
+.contect_me p {
+    color: #6a6e71;
+    line-height: 1.6
+}
+
+.contect_me p strong {
+    color: #d1d6da;
+    margin-right: 20px
+}
+
+.contect_me .my_from {
+    position: relative
+}
+
+
+.contect_me .my_from label {
+    display: block;
+    color: #d1d6da;
+    margin: 10px 0
+}
+
+.contect_me .my_from label::after {
+    content: "*";
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 5px
+}
+
+
+
+.contect_me .my_from input {
+    background-color: #4b5557;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.contect_me .my_from textarea {
+    background-color: #4b5557;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 280px;
+    resize: none;
+
+}
+
+.contect_me .my_from #span {
+    color: #fff;
+    position: absolute;
+    bottom: 48px;
+    left: 45%;
+}
+
+.contect_me .my_from input[type="submit"] {
+    background-color: #191e22;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+/* End Contect Me */
+
+
+/*Start Footer */
+.footer {
+    background: #191e22;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #efe8e8ad
+}
+
+.footer > div {
+    margin-left: 20px
+}
+
+.footer div i {
+    background-color: #00000033;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 40%;
+    transition: all .8s;
+    text-align: center
+}
+
+.footer div .fa-facebook-f:hover {
+    background-color: #3b5998;
+    border: 1px solid #3b5998
+}
+
+.footer div .fa-twitter:hover {
+    background-color: #55acee;
+    border: 1px solid #55acee
+}
+
+.footer div .fa-google-plus-g:hover {
+    background-color: #dd4b39;
+    border: 1px solid #dd4b39
+}
+
+.footer div .fa-linkedin:hover {
+    background-color: #0a66c2;
+    border: 1px solid #0a66c2
+}
+
+.footer span {
+    margin-right: 20px
+}
+
+/* End Footer */
+
+@media(max-width:380px) {
+
+    .header .slider .intro h2,
+    .header .slider .intro button {
+        font-size: 15px
+    }
+
+    .footer {
+        flex-direction: column
+    }
+
+    .footer > div {
+        margin-bottom: 10px
+    }
+
+}
+
+@media(max-width:767px) {
+
+    .contain {
+        width: 100%
+    }
+
+    .testmo q {
+        font-size: 10px
+    }
+
+    p {
+        font-size: 15px
+    }
+
+    .header .nav_bar {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 100%;
+        padding: 80px 7% 0;
+        max-height: 80px;
+        overflow: hidden;
+        transition: var(--trans);
+    }
+
+    .header .nav_bar ul {
+        flex-direction: column;
+        text-align: right
+    }
+
+    .header .nav_bar ul li {
+        padding: 0
+    }
+
+    .header .nav_bar ul li a {
+        padding: 10px 0;
+        font-size: 20px
+    }
+
+    .header .nav_bar h2 {
+        position: fixed;
+        top: 4%;
+        left: 2%;
+        z-index: 2;
+        color: #fff
+    }
+
+    .header .fa-bars {
+
+        display: block !important;
+        z-index: 2;
+        position: fixed;
+        top: 4%;
+        right: 2%;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer
+    }
+
+    .hidemenu {
+        max-height: 375px !important
+    }
+
+
+    .resume p {
+        padding: 0
+    }
+
+
+    .myedu .mainu,
+    .myedu .epx {
+        float: none;
+        width: 100%
+    }
+
+
+}
+
+@media(min-width:768px) {
+
+    .contain {
+        width: 750px
+    }
+
+
+}
+
+@media (min-width:768px) and (max-width:880px) {
+
+    .header .nav_bar h2,
+    .header .nav_bar ul li a {
+        font-size: 15px
+    }
+
+}
+
+@media(min-width:992px) {
+
+    .contain {
+        width: 970px
+    }
+
+    .protfolio .myimage {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+
+}
+
+@media(min-width:1200px) {
+
+    .contain {
+        width: 1170px
+    }
+
+
+}
