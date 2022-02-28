@@ -67,7 +67,6 @@ html {
     position: relative;
     z-index: 1;
     text-transform: capitalize;
-    font-style: italic;
     transition: all .3s;
     transition-delay: .3s
 }
@@ -146,7 +145,7 @@ html {
 :root {
 
     --color1: #2ecc71;
-    --trans: .4s
+    --trans: .4s ease-in-out
 }
 
 :focus::-webkit-input-placeholder {
@@ -178,8 +177,7 @@ html {
     width: fit-content;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    padding: 10px 0;
-    font-style: italic;
+    padding: 10px 0
 
 
 }
@@ -238,7 +236,6 @@ html {
 .header .nav_bar ul li a {
     color: #fff;
     font-weight: bold;
-    font-style: italic;
     font-size: 17px;
     transition: var(--trans);
     display: inline-block
@@ -414,6 +411,8 @@ html {
     font-weight: bold
 }
 
+.myskills .prog .tack{margin-bottom: 10px}
+
 .myskills .prog .tack h3 {
     color: #555;
     text-transform: uppercase
@@ -431,7 +430,8 @@ html {
     line-height: 30px;
     font-weight: bold;
     text-align: right;
-    color: #fff
+    color: #fff;
+    transition: .7s ease-in-out
 }
 
 /*End Skills*/
@@ -468,8 +468,7 @@ html {
 }
 
 .resume button a {
-    color: inherit;
-    font-style: italic
+    color: inherit
 }
 
 /*End Resume */
@@ -643,12 +642,12 @@ html {
 
 .protfolio .myimage > div img {
     width: 100%;
-    margin: 10px;
     padding: 3px;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 1px 2px 9px;
-    transition: var(--trans)
+    transition: var(--trans);
+    object-fit: cover
 }
 
 .protfolio .myimage > div:hover img {
@@ -673,13 +672,6 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px
 }
-
-.contect_me .info {
-
-    font-style: italic;
-
-}
-
 
 .contect_me h2 {
     color: #fff
@@ -842,7 +834,7 @@ html {
     .header .nav_bar {
         position: fixed;
         top: 0;
-        z-index: 1;
+        z-index: 2;
         display: inline-block;
         width: 100%;
         padding: 80px 7% 0;

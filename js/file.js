@@ -68,7 +68,42 @@ $(function () {
         } else {
             $(".fa-arrow-up").fadeOut("slow")
         }
-    })
+        
+        //Do My Progress
+        if (this.scrollY >= $(".myskills .contain").offset().top - 50) {
+
+            $(".tack div span").each(function () {
+
+                $(this).css("width", $(this).data("width"))
+
+           
+            });
+
+
+        } else {
+
+            $(".prog span").each(function () {
+
+                $(this).css("width", 0)
+            });
+        }
+
+    });
+    
+     // Smoothly Scroll To Elment
+    $(".nav_bar ul li a").click(function (e) {
+
+        e.preventDefault();
+        
+        $(".nav_bar").toggleClass("hidemenu");
+
+        document.querySelector($(this).data("section")).scrollIntoView({
+
+            behavior: "smooth"
+
+        });
+
+    });
 
     // Click To Go Up
     $(".fa-arrow-up").click(function () {
@@ -76,3 +111,4 @@ $(function () {
         $(window).scrollTop(0)
     })
 })
+
