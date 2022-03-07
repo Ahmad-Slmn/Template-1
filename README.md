@@ -1,2 +1,2 @@
 # Template1
-I Do This Slider With Mr Osama Elzero
+I Do This Template With Mr Osama Elzero
