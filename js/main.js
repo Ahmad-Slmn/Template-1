@@ -4,7 +4,6 @@ const myspan = document.getElementById("span");
 
 const max_length = mytexarea.getAttribute("maxlength")
 
-
 mytexarea.oninput = function () {
 
     myspan.innerHTML = max_length - this.value.length;
@@ -26,7 +25,6 @@ $(function () {
 
         $(".nav_bar").toggleClass("hidemenu")
     })
-
 
     // Click To See What Our Clients Say About Us
     $(".testmo ul li:first-of-type").click(function () {
@@ -68,7 +66,7 @@ $(function () {
         } else {
             $(".fa-arrow-up").fadeOut("slow")
         }
-        
+
         //Do My Progress
         if (this.scrollY >= $(".myskills .contain").offset().top - 50) {
 
@@ -76,7 +74,7 @@ $(function () {
 
                 $(this).css("width", $(this).data("width"))
 
-           
+
             });
 
 
@@ -89,12 +87,12 @@ $(function () {
         }
 
     });
-    
-     // Smoothly Scroll To Elment
+
+    // Smoothly Scroll To Elment
     $(".nav_bar ul li a").click(function (e) {
 
         e.preventDefault();
-        
+
         $(".nav_bar").toggleClass("hidemenu");
 
         document.querySelector($(this).data("section")).scrollIntoView({
@@ -111,4 +109,3 @@ $(function () {
         $(window).scrollTop(0)
     })
 })
-

@@ -178,8 +178,6 @@ html {
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
     padding: 10px 0
-
-
 }
 
 .header .slider .intro button {
@@ -302,7 +300,8 @@ html {
 .about_me .img img {
     width: 100%;
     transition: 1s;
-    filter: grayscale(100%)
+    filter: grayscale(100%);
+    border-radius: 10px
 }
 
 .about_me .img img:hover {
@@ -411,7 +410,9 @@ html {
     font-weight: bold
 }
 
-.myskills .prog .tack{margin-bottom: 10px}
+.myskills .prog .tack {
+    margin-bottom: 10px
+}
 
 .myskills .prog .tack h3 {
     color: #555;
